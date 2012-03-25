@@ -56,7 +56,7 @@ SRC = FileList['ext/*.c'] + FileList['ext/*.h']
 file 'ext/rsruby_c.so' => SRC do
   Dir.chdir('ext')
   if RUBY_PLATFORM !~ /mswin32$/
-    system("ruby extconf.rb -- --with-R-home=/usr/lib/R --with-R-include=/usr/share/R/include")
+    system("ruby extconf.rb -- --with-R-dir=$R_HOME --with-R-include=/usr/share/R/include/")
     system("make")
   else
     # Windows-specific build that does not use extconf.rb or make
