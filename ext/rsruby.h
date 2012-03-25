@@ -34,10 +34,10 @@
 
 #include "ruby.h"
 
-#include "R.h"
-#include "Rdefines.h"
-#include "Rinternals.h"
-#include "Rdefines.h"
+#include "ext/R/include/R.h"
+#include "ext/R/include/Rdefines.h"
+#include "ext/R/include/Rinternals.h"
+
 
 #include "signal.h"
 
